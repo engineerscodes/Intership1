@@ -1,0 +1,70 @@
+ .TestMon button.rec-dot {
+
+     background: #C4C4C4;
+     border: 2px #333;
+     border-radius: 50;
+     box-shadow: 0 0 1px 3px #F8F8F8;
+ }
+
+ .TestMon button.rec-dot:hover{
+         box-shadow: rgb(103 58 183) 0px 0px 1px 3px;
+ }
+
+.rec.rec-arrow {
+    border-radius: 50;
+    background: #333;
+    color: #00ff00;
+    display: none;
+}
+ .TestMon button {
+     border-radius: 50%;
+     margin-bottom: 100px;
+ }
+
+ .TestMon button.rec-dot_active {
+     border: rgb(255, 252, 252);
+    background: #C4C4C4;
+ }
+
+.rec-arrow{
+    display: none;
+}
+
+
+ .ImageTsCard {
+
+     clip-path: circle(60px at center);
+ }
+
+ .TsConatiner {
+     margin-top: 100px;
+
+     width: 633px;
+     height: 232px;
+     background: #F8F8F8;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+
+ }
+
+ .TS1 {
+
+     align-items: center;
+     flex-wrap: wrap;
+     margin: 5px;
+ }
+
+ .TS2 {
+
+     text-align: center;
+     margin: auto;
+     font-style: normal;
+     font-weight: normal;
+     font-size: 18px;
+     line-height: 21px;
+     margin: 5px;
+     color: #000000;
+ }
+
+ 

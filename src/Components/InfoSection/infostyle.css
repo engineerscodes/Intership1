@@ -1,0 +1,143 @@
+.Container {
+
+    width: 100%;
+    height: 700px;
+    background: #20DEA0;
+    color: white;
+
+}
+
+.rootInfo {
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+
+    align-items: center;
+
+
+}
+
+.rootInfo .info {
+
+    font-weight: bold;
+
+
+}
+
+.text1 {
+    width: 109px;
+    height: 42px;
+    font-size: 64px;
+    line-height: 42px;
+    color: #fff;
+    display: inline;
+    padding: 10px 0px 10px 10px;
+    font-weight: bold;
+}
+
+.text2 {
+    font-size: 36px;
+
+    display: inline;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+@media screen and (max-width :1200px) {
+    .text1 {
+        padding: 5px;
+        padding-right: 0px;
+        font-size: 48px;
+    }
+
+    .text2 {
+        padding: 5px;
+        font-size: 24px;
+    }
+}
+
+
+@media screen and (max-width :798px) {
+    .text1 {
+        padding: 5px;
+        padding-right: 0px;
+        font-size: 48px;
+        margin: 0px;
+        display: inline-block;
+    }
+
+    .text2 {
+        padding: 5px;
+        font-size: 24px;
+        margin: 10px;
+        display: block;
+    }
+}
+
+@media screen and (max-width :730px) {
+    .text1 {
+        padding: 5px;
+        padding-right: 0px;
+        font-size: 48px;
+        margin-left: 25px;
+    }
+
+    .text2 {
+        padding: 5px;
+        font-size: 24px;
+        margin-left: 25px;
+    }
+}
+
+@media screen and (max-width :520px) {
+    .text1 {
+        padding: 0px;
+        font-size: 28px;
+        margin-left: 20px;
+    }
+
+    .text2 {
+        padding: 0px;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width :410px) {
+    .text1 {
+        font-size: 48px;
+        padding-left: 10px;
+        margin-left: 10px;
+        display: inline;
+    }
+
+    .text2 {
+        font-size: 32px;
+        margin-left: 10px;
+        display: inline;
+        padding-left: 10px;
+    }
+
+    .rootInfo {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width :370px) {
+    .text1 {
+        font-size: 30px;
+        margin-left: 0px;
+    }
+
+    .text2 {
+        font-size: 16px;
+        margin-left: 0px;
+    }
+
+    .rootInfo {
+        flex-direction: column;
+    }
+}
