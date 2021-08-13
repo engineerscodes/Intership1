@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-
+import Login from "../Components/Login/Login";
 class LoginPage extends Component {
+
   render() {
-    return <>
-         
-    </>;
+    return (
+      <>
+       <Login/>
+      </>
+    );
   }
 }
 export default LoginPage;

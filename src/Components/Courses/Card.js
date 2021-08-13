@@ -26,7 +26,7 @@ const Cards = (props) => {
         <Cardimage backgrounds={props.image.default}></Cardimage>
         <Cardtext>
           <HeadingText>{props.cardTitles}</HeadingText>
-          <h3>{props.info}</h3>
+          <h3>{props.info.toUpperCase()}</h3>
           <ParaCard>{props.cardText}</ParaCard>
         </Cardtext>
 
@@ -46,7 +46,7 @@ const Cards = (props) => {
             >
               ENROLL
             </CButton>
-            <Lefts>{1}</Lefts>
+            <Lefts>{1+Math.floor(Math.random() * 10)}</Lefts>
           </CStat>
         </CardStats>
       </Card>

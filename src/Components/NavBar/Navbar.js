@@ -9,10 +9,76 @@ import {
   NavLinksRouter,
 } from "./NavbarStyle";
 
+
+
 import { FaBars } from "react-icons/fa";
 
 let greengb = "true";
 const Navbar = (props) => {
+  function CheckLoginStatus() {
+    let username = document.cookie.split("=")[1];
+    if(username === undefined)
+    {
+       //console.log("not logged in");
+       return (
+         <>
+           <NavItem>
+             <NavLinksRouter
+               to="/login"
+               duration={500}
+               exact="true"
+               offset={-80}
+               boderbg={greengb}
+             >
+               LOGIN
+             </NavLinksRouter>
+           </NavItem>
+           <NavItem>
+             <NavLinksRouter
+               to="/register"
+               duration={500}
+               exact="true"
+               offset={-80}
+               boderbg={greengb}
+             >
+               SIGNUP
+             </NavLinksRouter>
+           </NavItem>
+         </>
+       );
+      
+    }else{
+       
+       // console.log(username)
+        return (
+          <>
+            <NavItem>
+              <NavLinksRouter
+                to="/account"
+                duration={500}
+                exact="true"
+                offset={-80}
+                boderbg={greengb}
+              >
+                ACCOUNT
+              </NavLinksRouter>
+            </NavItem>
+            <NavItem>
+              <NavLinksRouter
+                to="/logout"
+                duration={500}
+                exact="true"
+                offset={-80}
+                boderbg={greengb}
+              >
+                <abbr title={username}>LOGOUT</abbr>
+              </NavLinksRouter>
+            </NavItem>
+          </>
+        );
+    }
+  }
+ 
   return (
     <>
       <Nav>
@@ -47,29 +113,8 @@ const Navbar = (props) => {
                 COURSE
               </NavLinksRouter>
             </NavItem>
-            <NavItem>
-              <NavLinksRouter
-                to="/login"
-                duration={500}
-                exact="true"
-                offset={-80}
-                boderbg={greengb}
-              >
-                LOGIN
-              </NavLinksRouter>
-            </NavItem>
-
-            <NavItem>
-              <NavLinksRouter
-                to="/signup"
-                duration={500}
-                exact="true"
-                offset={-80}
-                boderbg={greengb}
-              >
-                SIGNUP
-              </NavLinksRouter>
-            </NavItem>
+            {CheckLoginStatus()}
+           
             <NavItem>
               <NavLinks
                 to="contact"

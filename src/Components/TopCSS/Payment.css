@@ -9,10 +9,11 @@
    }
    #paycard {
        margin: auto;
-       width: 600px;
+       max-width: 600px;
        padding: 3rem 3.5rem;
        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
        background-color: white;
+       margin: 30px;
    }
 
    #card-title {
@@ -259,4 +260,14 @@ margin: 0;
     100% {
         background-position: 0 0;
     }
+}
+
+#PaymentBody a{
+    text-decoration: none;
+    color:#848687;
+    font-weight: bold;
+}
+
+abbr{
+    text-decoration: none;
 }

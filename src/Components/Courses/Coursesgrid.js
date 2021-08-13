@@ -9,6 +9,7 @@ import Modal from "react-modal";
 import { useEffect } from "react";
 import "./modal.css";
 import { useHistory } from "react-router-dom";
+
 Modal.setAppElement("#root");
 const CourseGrid = () => {
   const history = useHistory();

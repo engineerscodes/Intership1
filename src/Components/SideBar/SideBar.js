@@ -10,6 +10,33 @@ import {
 } from "./SideBarStyle";
 
 const SideBar = (props) => {
+   function CheckLoginStatus() {
+      let username = document.cookie.split("=")[1];
+      if(username === undefined){
+       return (
+         <>
+           <SibeBarLinkRouter to="/login" onClick={props.toggle}>
+             LOGIN
+           </SibeBarLinkRouter>
+           <SibeBarLinkRouter to="/register" onClick={props.toggle}>
+             SIGNUP
+           </SibeBarLinkRouter>
+         </>
+       );
+      }else{
+        return (
+          <>
+            <SibeBarLinkRouter to="/account" onClick={props.toggle}>
+              ACCOUNT
+            </SibeBarLinkRouter>
+            <SibeBarLinkRouter to="/logout" onClick={props.toggle}>
+              <abbr title={username}>LOGOUT</abbr>
+            </SibeBarLinkRouter>
+          </>
+        );
+      }
+   }
+   
   function homeDisplayAction() {
     if (props.show === "true") {
       return (
@@ -19,7 +46,7 @@ const SideBar = (props) => {
       );
     } else {
       return (
-        <SibeBarLinkRouter to="/AndroidClub" onClick={props.toggle}>
+        <SibeBarLinkRouter to="/" onClick={props.toggle}>
           HOME
         </SibeBarLinkRouter>
       );
@@ -35,18 +62,10 @@ const SideBar = (props) => {
         <SideBarWrapper>
           <SideBarMenu>
             {homeDisplayAction()}
-            <SibeBarLinkRouter to="/AndroidClub/Events" onClick={props.toggle}>
-              EVENTS
+            <SibeBarLinkRouter to="/Courses" onClick={props.toggle}>
+              COURSE
             </SibeBarLinkRouter>
-            <SibeBarLinkRouter to="/AndroidClub/Team" onClick={props.toggle}>
-              TEAM
-            </SibeBarLinkRouter>
-            <SibeBarLinkRouter
-              to="/AndroidClub/ANNOUNCEMENT"
-              onClick={props.toggle}
-            >
-              ANNOUNCEMENT
-            </SibeBarLinkRouter>
+            {CheckLoginStatus()}
             <SibeBarLink to="contact" onClick={props.toggle}>
               CONTACT
             </SibeBarLink>

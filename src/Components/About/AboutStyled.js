@@ -47,6 +47,7 @@ export const TextF = styled.div`
     max-width: 520px !important;
     position: relative;
     top: -40px;
+    padding: 0 10px 0 10px;
   }
 `;
 export const TextF2 = styled.div`
@@ -64,6 +65,7 @@ export const TextF2 = styled.div`
     max-width: 520px !important;
     position: relative;
     top: -40px;
+    
   }
 `;
 

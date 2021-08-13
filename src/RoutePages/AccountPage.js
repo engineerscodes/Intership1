@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import Navbar from "../Components/NavBar/Navbar";
 import SideBar from "../Components/SideBar/SideBar";
 import Footer from "../Components/Footer/Footers.js";
-import CourseGrid from "../Components/Courses/Coursesgrid";
 
-class CoursePage extends Component {
+import Account from "../Components/Account/Account";
+
+
+
+class AccountPage extends Component {
   state = { isOpen: false };
 
   toggle = () => {
@@ -15,10 +18,13 @@ class CoursePage extends Component {
       <>
         <SideBar isOpen={this.state.isOpen} toggle={this.toggle} show={false} />
         <Navbar toggle={this.toggle} show={"false"} />
-        <CourseGrid />
+
+        <Account />
+
         <Footer />
       </>
     );
   }
 }
-export default CoursePage;
+
+export default AccountPage;
