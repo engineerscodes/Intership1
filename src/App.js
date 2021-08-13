@@ -7,9 +7,11 @@ import LogoutPage from "./RoutePages/LogoutPage";
 import RegPage from "./RoutePages/RegPage";
 import AccountPage from "./RoutePages/AccountPage";
 import NotFound from "./RoutePages/NotFound404";
+import  ScrollToTop from "./Components/ScrollToTop"
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Switch>
           <Route path="/" component={HomePage} exact />
